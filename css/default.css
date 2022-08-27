@@ -60,7 +60,6 @@ nav {
 }
 nav > a {
 	margin: 0em;
-	border-radius: 0;
 	font-weight: bold;
 }
 .navpad {
@@ -85,7 +84,6 @@ section {
 	max-width: 50em;
 	margin: 1em 1%;
 	border: solid 1px #AAA;
-	border-radius: 5px;
 	box-shadow: 1px 5px 10px 1px #333;
 	background-image: url("../img/scroll1.png");
 }
@@ -107,13 +105,13 @@ a {
 	display: inline-block;
 	color: darkblue;
 	padding: 0.5em;
-	border-radius: 0.25em;
 	border: groove 2px #eee;
 	max-width: 30em;
 	margin: 0 auto;
-	background: #eef;
 	padding: 1em;
 	text-decoration: none;
+	background: #eef;
+	background: url("../img/marble.jpg");
 }
 a:visited {
     color: darkblue;
