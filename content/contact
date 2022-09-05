@@ -1,4 +1,6 @@
 <section>
 	<h2>Contact</h2>
-	<p><a href="https://github.com/fractalbach">My Github - Fractalbach</a></p>
+	<p> Here are some other ways you can find me! </p>
+	<p class="centered"><a href="https://github.com/fractalbach">My Github - Fractalbach</a></p>
+	<p class="centered"><a href="https://linkedin.com/in/chrisachenbach">LinkedIn</a></p>
 </section>
