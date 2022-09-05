@@ -1,0 +1,7 @@
+(quote
+	(content '''I hope the field of computer science never loses its sense of fun. Above all, I hope we don't become missionaries. Don't feel as if you're Bible salesmen. The world has too many of those already. What you know about computing other people will learn. Don't feel as if the key to successful computing is only in your hands. What's in your hands, I think and hope, is intelligence: the ability to see the machine as more than when you were first led up to it, that you can make it more.''')
+	(author '''Alan Perlis''')
+	(source '''The Structure and Interpretation of Computer Programs by Hal Abelson, Gerald Jay Sussman and Julie Sussman (McGraw-Hill, 2nd edition, 1996).''')
+)
+
+
