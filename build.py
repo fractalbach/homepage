@@ -22,7 +22,12 @@ all_pages = [
 		'filename': 'contact',
 		'TITLE': 'Contact',
 		'DESCRIPTION': "Contact Me!",
-	}
+	},
+	{
+		'filename': 'quotes',
+		'TITLE': 'Quotes',
+		'DESCRIPTION': "Some of my favorite quotes, adages, and proverbs!",
+	},
 ]
 	
 
