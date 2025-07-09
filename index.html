@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Achenbach - Home</title>
+<title>Achenbach</title>
 <meta name="author" content="Chris Achenbach">
 <meta name="description" content="Chris Achenbach's Homepage!">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/new.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 </head>
@@ -17,34 +17,141 @@
 <header>
 	<div class="cubepad"></div>
 	<div class="cubeHolder"><img src="img/cube.gif" class="cube"/></div>
+
 	<h1>Chris Achenbach's Homepage!</h1>
 	<div class="cubeHolder"><img src="img/cube.gif" class="cube"/></div>
 	<div class="cubepad"></div>
 </header>
 
-<nav>
-	<div class="navpad"></div>
-	<a href="index.html">Home</a>
-	<a href="projects.html">Projects</a>
-	<a href="quotes.html">Quotes</a>
-	<a href="contact.html">Contact</a>
-	<div class="navpad"></div>
-</nav>
-
 <main>
+
 <section>
-	<h2>Welcome to my Homepage!</h2>
-	<p>This is my homepage, where I put things that I've made, or stuff that I think is interesting!</p>
-	<p class="centered"><a href="https://tilegame.github.io/TileExperiments/">Link to the Tilegame!</a></p>
-	<p>Also, check out this webpage slideshow that has interactive demos of some of my games:</p>
-	<p class="centered"><a href="slideshow/index.html">Link to Slideshow</a></p>
+	<p>
+	Welcome to my homepage, here are some of my random hobby projects.
+	</p>
+	<marquee>Welcome to my awesome homepage, please you enjoy your stay</marquee>
+	<marquee direction="up">Welcome Welcome Welcome Welcome Welcome</marquee>
+	<marquee direction="down" width="250" height="200" behavior="alternate" class="outlined">
+		<marquee behavior="alternate"> Welcome Welcome Welcome Welcome Welcome</marquee>
+	</marquee>
+</section>
+
+<section>
+<h2>Currently Working on...</h2>
+<p>a first-person ARPG with the Godot engine.</p>
+
+<video controls preload="none" src="vid/WhateverDebug.mp4" type="video/mp4" poster="img/video.png"></video>
+</section>
+
+<section>
+	<h2>Pathtrace Game</h2>
+	<p>Pathtracer tutorial converted into a game, playable on shadertoy: <a href="https://www.shadertoy.com/view/dlGcRR">https://www.shadertoy.com/view/dlGcRR</a></p>
+	<video controls preload="none" src="vid/PathtracerGame.mp4" type="video/mp4" poster="img/video.png"></video>
+	<div class="VeryLazyLoadingFrame" data-src="https://www.shadertoy.com/embed/dlGcRR?gui=false&paused=false&t=10&muted=false" data-width="100%" data-height="360">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="360" />
+	</div>
+</section>
+
+<section>
+	<h2>Dark Matter Simulator</h2>
+	<img src="img/dark_matter.gif" class="main-img"/>
+	<p>
+	The Dark Matter Simulator is an educational web browser simulation for college astronomy classes used to learn
+	about dark matter, and how it affects the velocity of stars in a galaxy! The
+	simulation features real data from published observations to show how stars in
+	galaxies are moving more quickly than expected, and how dark matter can be used
+	to explain why.
+	</p>
+	<p class="centered"><a href="https://foothillastrosims.github.io/dark-matter/">Try out the Dark Matter Simulator!</a></p>
+	<p class="centered"><a href="https://github.com/FoothillAstroSims/dark-matter">Dark Matter Simulator Source Code</a></p>
+</section>
+
+<section>
+	<h2>Tilegame Client and Server</h2>
+	<p>2D chatroom. Chat messages appear over your head and you can walk around a small tile-based map. Find out more from the Overview:</p>
+	<img src="img/tilegame_1.png" class="main-img"/>
+	<p class="centered"><a href="https://github.com/tilegame/">Overview of Tilegame</a></p>
+
+	<div class="VeryLazyLoadingFrame" data-src="https://tilegame.github.io/TileExperiments/" data-width="100%" data-height="600">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	</div>
+
+</section>
+
+<section>
+	<h2>Balloon Jump Game</h2>
+	<p>I made a game where you go up by grabbing balloons.</p>
+	<img src="img/balloon1.gif" class="main-img"/>
+	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/float-up/" data-width="100%" data-height="600">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	</div>
+</section>
+
+<section>
+	<h2>Dot Path Game</h2>
+	<p>A browser game made with SVG</p>
+	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/DotPathGame/" data-width="100%" data-height="600">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	</div>
 </section>
 
 </main>
 
 </div>
-<footer>Chris Achenbach &copy; 2022</footer>
+<footer>Chris Achenbach &copy; 2025</footer>
+
+
+
+<script>
+
+function LoadFrame(event) {
+	let el = event.currentTarget;
+	el.removeEventListener("click", LoadFrame, false);
+
+	let frame = document.createElement("iframe");
+	frame.setAttribute("src", el.getAttribute("data-src"));
+	frame.setAttribute("width", el.getAttribute("data-width"));
+	frame.setAttribute("height", el.getAttribute("data-height"));
+	el.appendChild(frame);
+
+	let img = el.querySelector(":scope > .MyFramePlaceholder");
+	img.style.display = "none";
+
+	let button = document.createElement("button");
+	button.innerText = "Close Game";
+	button.className = "MyFrameButton";
+	button.addEventListener("click", CloseFrame, false);
+	el.appendChild(button);
+
+	event.stopPropagation();
+}
+
+function CloseFrame(event) {
+	let el = event.currentTarget.parentElement;
+	el.addEventListener("click", LoadFrame, false);
+
+	let img = el.querySelector(":scope > img");
+	img.style.display = "";
+
+	let button = el.querySelector(":scope > button");
+	button.remove();
+
+	let frame = el.querySelector(":scope > iframe");
+	frame.remove();
+
+	event.stopPropagation();
+}
+
+let eles = document.querySelectorAll(".VeryLazyLoadingFrame");
+
+for (let i = 0; i < eles.length; i++) {
+	eles[i].addEventListener("click", LoadFrame, false);
+}
+
+</script>
 </body>
 </html>
+
+
 
 

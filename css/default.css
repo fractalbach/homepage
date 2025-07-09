@@ -13,7 +13,8 @@ html {
 body {
 	min-height: 100vh;
 	margin: 0;
-	/* background: linear-gradient(0deg, #1C189B 0%, #8593ff 100%) fixed no-repeat; */
+	background: linear-gradient(0deg, #1C189B 0%, #8593ff 100%) fixed no-repeat;
+	color: black;
 	font-family: "Marko One", "Libre Baskerville";
 	background: url(../img/stone1.png)
 	/*

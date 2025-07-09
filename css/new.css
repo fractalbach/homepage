@@ -1,0 +1,159 @@
+@font-face {
+	font-family: "Marko One";
+/* 	src: url("../fonts/Marko_One/MarkoOne-Regular.ttf"); */
+	font-weight: 400;
+}
+
+
+html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: #113;
+	color: white;
+	font-family: "Marko One", "Libre Baskerville";
+}
+
+h1 {
+	font-size: 2em;
+	padding: 0.5em 0;
+	margin: 0;
+}
+
+header, footer {
+	overflow-x: auto;
+	color: white;
+	text-shadow: 1px 1px 2px #000;
+	text-align: center;
+	background: #111;
+	padding: 0.5%;
+}
+
+header {
+	display: flex;
+}
+
+.cube {
+	max-height: 5em;
+	margin-bottom: -0.5em;
+	margin-top: -0.75em;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.cubepad {
+	flex: auto;
+}
+
+nav {
+	display: flex;
+	padding-top: 0.5em ;
+}
+nav > a {
+	margin: 0em;
+	font-weight: bold;
+}
+.navpad {
+	flex: auto;
+}
+
+main{
+	grid-area: main;
+    max-width: 50rem;
+    margin: 0 auto;
+    /* padding: 1%; */
+    font-size: 1.25rem;
+    line-height: 1.25;
+    /* box-shadow:inset 0px 0px 5px black; */
+}
+
+section {
+	/* background: #f5f5ff; */
+	background: #222;
+	padding: 1em;
+	padding-top: 0;
+	margin: 1em auto;
+	max-width: 50em;
+	margin: 1em 1%;
+	border: solid 1px #2a2626;
+	/* box-shadow: 1px 5px 10px 1px #333; */
+}
+
+h2 {
+	text-align: center;
+/* 
+	//
+	// Adds a nice underline to the header.
+	// 
+	border-bottom: 2px solid #999;
+	padding-bottom: 0.5em ;
+*/
+
+}
+
+
+p {
+	margin:1em;
+}
+
+
+a, a:visited {
+	color: lightskyblue;
+	display: inline-block;
+}
+
+a:hover, a:focus {
+	background: rgb(33, 74, 156);
+}
+
+.main-img {
+	display: block;
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+}
+
+.all-but-footer {
+	min-height: calc(100vh - 3em);
+}
+
+footer {
+	color: #bbb;
+	height: 2em;
+	margin: 0em;
+	padding-top: 0.75em;
+	padding-bottom: 0.25em;
+}
+
+video {
+	width: 100%;
+}
+
+.VeryLazyLoadingFrame>button {
+	display: flex;
+	margin: auto;
+}
+
+.MyFrame {
+	display: none;
+	resize: both;
+}
+
+.MyFramePlaceholder {
+	border: solid 1px #bbb;
+	background: rgba(135, 206, 250);
+}
+
+.MyFramePlaceholder:hover {
+	cursor: pointer;
+	border: solid 1px lightskyblue;
+	opacity: 0.5;
+
+}
