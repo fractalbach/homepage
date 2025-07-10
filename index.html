@@ -37,19 +37,24 @@
 </section>
 
 <section>
-<h2>Currently Working on...</h2>
-<p>a first-person ARPG with the Godot engine.</p>
-
-<video controls preload="none" src="vid/WhateverDebug.mp4" type="video/mp4" poster="img/video.png"></video>
+	<h2>Currently Working on...</h2>
+	<p>a first-person ARPG with the Godot engine.</p>
+	<video controls preload="none" src="vid/WhateverDebug.mp4" type="video/mp4" poster="img/video.png"></video>
 </section>
 
 <section>
-	<h2>Pathtrace Game</h2>
+	<h2>Pathtracer Game</h2>
 	<p>Pathtracer tutorial converted into a game, playable on shadertoy: <a href="https://www.shadertoy.com/view/dlGcRR">https://www.shadertoy.com/view/dlGcRR</a></p>
-	<video controls preload="none" src="vid/PathtracerGame.mp4" type="video/mp4" poster="img/video.png"></video>
-	<div class="VeryLazyLoadingFrame" data-src="https://www.shadertoy.com/embed/dlGcRR?gui=false&paused=false&t=10&muted=false" data-width="100%" data-height="360">
-		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="360" />
+	<video controls preload="none" src="vid/PathtracerGame.mp4" type="video/mp4" poster="img/pathtracer_game_video.png"></video>
+	<div class="VeryLazyLoadingFrame" data-src="https://www.shadertoy.com/embed/dlGcRR?gui=false&paused=false&t=10&muted=false" data-width="100%" data-height="500">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="500" />
 	</div>
+</section>
+
+<section>
+	<h2>Run of the Mill</h2>
+	<p>Neat game about harvesting wheat</p>
+	<iframe loading="lazy" src="https://itch.io/embed/1816243" width="552" height="167" frameborder="0"><a href="https://synack.itch.io/run-of-the-mill">Run of the Mill by fractalbach</a></iframe>
 </section>
 
 <section>
@@ -72,8 +77,8 @@
 	<img src="img/tilegame_1.png" class="main-img"/>
 	<p class="centered"><a href="https://github.com/tilegame/">Overview of Tilegame</a></p>
 
-	<div class="VeryLazyLoadingFrame" data-src="https://tilegame.github.io/TileExperiments/" data-width="100%" data-height="600">
-		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	<div class="VeryLazyLoadingFrame" data-src="https://tilegame.github.io/TileExperiments/" data-width="100%" data-height="800">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="800" style="object-fit: contain;"/>
 	</div>
 
 </section>
@@ -82,16 +87,16 @@
 	<h2>Balloon Jump Game</h2>
 	<p>I made a game where you go up by grabbing balloons.</p>
 	<img src="img/balloon1.gif" class="main-img"/>
-	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/float-up/" data-width="100%" data-height="600">
-		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/float-up/" data-width="100%" data-height="500">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="500" />
 	</div>
 </section>
 
 <section>
 	<h2>Dot Path Game</h2>
 	<p>A browser game made with SVG</p>
-	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/DotPathGame/" data-width="100%" data-height="600">
-		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="600" />
+	<div class="VeryLazyLoadingFrame" data-src="https://fractalbach.github.io/DotPathGame/" data-width="100%" data-height="500">
+		<img class="MyFramePlaceholder" src="img/PlayGame.png" width="100%" height="500" />
 	</div>
 </section>
 
@@ -108,14 +113,14 @@ function LoadFrame(event) {
 	let el = event.currentTarget;
 	el.removeEventListener("click", LoadFrame, false);
 
-	let frame = document.createElement("iframe");
-	frame.setAttribute("src", el.getAttribute("data-src"));
-	frame.setAttribute("width", el.getAttribute("data-width"));
-	frame.setAttribute("height", el.getAttribute("data-height"));
-	el.appendChild(frame);
-
-	let img = el.querySelector(":scope > .MyFramePlaceholder");
+	let img = el.querySelector(":scope > img");
 	img.style.display = "none";
+
+	let frame = document.createElement("iframe");
+	frame.setAttribute("src", el.dataset.src);
+	frame.setAttribute("width", img.getAttribute("width"));
+	frame.setAttribute("height", img.getAttribute("height"));
+	el.appendChild(frame);
 
 	let button = document.createElement("button");
 	button.innerText = "Close Game";

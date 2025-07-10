@@ -75,10 +75,9 @@ section {
 	background: #222;
 	padding: 1em;
 	padding-top: 0;
-	margin: 1em auto;
 	max-width: 50em;
-	margin: 1em 1%;
-	border: solid 1px #2a2626;
+	margin: 1em 0% 2em 0%;
+	border: solid 1px #524c4c;
 	/* box-shadow: 1px 5px 10px 1px #333; */
 }
 
@@ -148,7 +147,8 @@ video {
 
 .MyFramePlaceholder {
 	border: solid 1px #bbb;
-	background: rgba(135, 206, 250);
+	background: rgb(0, 0, 0);
+	object-fit: contain;
 }
 
 .MyFramePlaceholder:hover {
